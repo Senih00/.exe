@@ -1,1 +1,4 @@
-codes
+#codes
+z=input("İşlemi giriniz: ")
+x=input("Birinci sayıyı giriniz: ")
+y=input("İkinci sayıyı giriniz: ")
