@@ -1,4 +1,39 @@
 #codes
-z=input("İşlemi giriniz: ")
-x=input("Birinci sayıyı giriniz: ")
-y=input("İkinci sayıyı giriniz: ")
+while True:
+    print("\n--- HESAP MAKİNESİ ---")
+    print("Toplama: +")
+    print("Çıkarma: -")
+    print("Çarpma: *")
+    print("Bölme: /")
+    print("Çıkış: q")
+
+    islem = input("İşlem seçin: ")
+
+    if islem == "q":
+        print("Program kapatıldı.")
+        break
+
+    try:
+        x = float(input("Birinci sayı: "))
+        y = float(input("İkinci sayı: "))
+    except ValueError:
+        print("Hata: Lütfen geçerli bir sayı girin!")
+        continue
+
+    if islem == "+":
+        print("Sonuç:", x + y)
+
+    elif islem == "-":
+        print("Sonuç:", x - y)
+
+    elif islem == "*":
+        print("Sonuç:", x * y)
+
+    elif islem == "/":
+        if y == 0:
+            print("Hata: Sıfıra bölme yapılamaz!")
+        else:
+            print("Sonuç:", x / y)
+
+    else:
+        print("Hatalı işlem seçimi!")
